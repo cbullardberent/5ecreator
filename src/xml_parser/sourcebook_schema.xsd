@@ -6,4 +6,59 @@
     xmlns:mstns="http://tempuri.org/XMLSchema1.xsd"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
+
+<!-- ==================== -->
+<!-- Enumerated types -->
+<!-- ==================== -->
+
+<xs:simpleType name="statType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="Strength"/>
+		<xs:enumeration value="Dexterity"/>
+		<xs:enumeration value="Constitution"/>
+		<xs:enumeration value="Intelligence"/>
+		<xs:enumeration value="Wisdom"/>
+		<xs:enumeration value="Charisma"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="skillType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="Acrobatics"/>
+		<xs:enumeration value="Animal Handling"/>
+		<xs:enumeration value="Arcana"/>
+		<xs:enumeration value="Athletics"/>
+		<xs:enumeration value="Deception"/>
+		<xs:enumeration value="History"/>
+		<xs:enumeration value="Insight"/>
+		<xs:enumeration value="Intimidation"/>
+		<xs:enumeration value="Investigation"/>
+		<xs:enumeration value="Medicine"/>
+		<xs:enumeration value="Nature"/>
+		<xs:enumeration value="Perception"/>
+		<xs:enumeration value="Performance"/>
+		<xs:enumeration value="Persuasion"/>
+		<xs:enumeration value="Religion"/>
+		<xs:enumeration value="Sleight of Hand"/>
+		<xs:enumeration value="Stealth"/>
+		<xs:enumeration value="Survival"/>
+	</xs:restriction>
+</xs:simpleType>
+
+
+<!-- ==================== -->
+<!-- Complex types -->
+<!-- ==================== -->
+
+<xs:element name="featType">
+	<xs:complexType>
+		<xs:attribute name="name"   type="xs:string" use="required" />
+		<xs:attribute name="desc"   type="xs:string" use="required" />
+		<xs:attribute name="bullet" type="xs:string" use="optional" />
+		<xs:attribute name="stat"   type="statType"  use="optional" />
+		<xs:attribute name="skill"  type="skillType" use="optional" />
+	</xs:complexType>
+</xs:element>
+
+
 </xs:schema>
