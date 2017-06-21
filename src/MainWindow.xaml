@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:src"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.091"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Height="35" Width="109" Margin="200,0,200,0" Grid.Row="0">
+            Title of App
+        </TextBlock>
+        <Button Name="TestButton" Margin="183,73,187,34" Grid.Row="1" MouseDown="TestButton_MouseDown">
+            Test Button Please Ignore
+        </Button>
     </Grid>
 </Window>

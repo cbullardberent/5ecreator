@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using DND_XML_Parse;
+
 namespace src
 {
     /// <summary>
@@ -22,7 +24,19 @@ namespace src
     {
         public MainWindow()
         {
+            // CRL - run pregenerated code for form
             InitializeComponent();
+
+            // CRL - initialize everything else
+            //TODO
+
+            System.Diagnostics.Trace.WriteLine("MainWindow() entered");
+        }
+
+        private void TestButton_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DND_XML_Parser parser = new DND_XML_Parser();
+            parser.XML_parser_main();
         }
     }
 }
